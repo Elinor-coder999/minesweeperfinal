@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="onInit()">
+    <div class="game-container">
+        <h1>Minesweeper</h1>
+        <button id="smile" onclick="onSmileyClick()">😃</button>
+        <div class="status">Lives: <span id="lives">3</span></div>
+        <div class="board"></div>
+        <div id="level-selection">
+        <button onclick="onLevelChange('BEGINNER')">Beginner</button>
+        <button onclick="onLevelChange('MEDIUM')">Medium</button>
+        <button onclick="onLevelChange('EXPERT')">Expert</button>
+        <div>
+            <span id="clock">0</span> Seconds
+        </div>
+        <div>
+            <span id="shownCount">0</span> Cells Revealed
+        </div>
+        <div>
+            <span id="markedCount">0</span> Cells Marked
+        </div>
+    </div>
+
+<footer> Elinor Israeli </footer>
+    <script src="new.js"></script>
+</body>
+</html>

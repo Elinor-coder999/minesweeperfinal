@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom:10px;
+}
+
+button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Board Styles */
+.board {
+    display: inline-block;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+td.shown {
+    background-color: #ddd;
+    cursor: default;
+}
+
+td.shown.mine {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+td.shown.mine::after {
+    content: "💣";
+}
+
+td.shown:not(.mine):empty {
+    background-color: #e0e0e0;
+}
+
+td.shown:not(.mine) {
+    background-color: #d3d3d3;
+}
+
+td.shown:not(.mine)::after {
+    content: attr(data-count);
+    color: #333;
+}
+
+td.marked {
+    background-color: #ffeb3b;
+}
+
+#smiley {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s;
+}
+
+#smiley:active {
+    transform: scale(0.9);
+}
+
+.board td.exploded {
+    background-color: red; /* Highlight the cell in red */
+    color: white;
+    font-weight: bold;
+}
